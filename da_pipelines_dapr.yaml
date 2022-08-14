@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+     app: da-pipelines
+  name: da-pipelines
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: da-pipelines
+  template:
+    metadata:
+      labels:
+        app: da-pipelines
+      annotations:
+        dapr.io/enabled: "true"
+        dapr.io/app-id: "da-pipelines"
+        dapr.io/app-port: "8100"
+    spec:
+      containers:
+      - name: da-pipelines
+        image: zsb8/da-pipelines:latest
+        ports:
+        - containerPort: 8100
+        imagePullPolicy: IfNotPresent
+        envFrom:
+          - configMapRef:
+              name: mongo-config
+          - secretRef:
+              name: mongo-secret
+
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: da-pipelines
+spec:
+  selector:
+    app: da-pipelines
+  type: LoadBalancer
+  ports:
+    - port: 8100
+      targetPort: 8100
