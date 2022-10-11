@@ -1,7 +1,7 @@
 This is the part2 of the Pipline. It use FastAPI to get the scraping data from the Pipeline part1.
 Compare the web data and jobs collection (MongoDB). Insert the new data and modify the expired data in jobs.
 Then Compare the jobs and postedjobs (MongoDB). Insert the new data and modify the expired data in postedjobs.
-It tested OK with noahs and da-services on K8S with Dapr.
+It tested OK with noahs and da-services on K8S with Dapr.     
 You should run these programs together: WB_DA_API_services, WB_noahs_doves and WB_pipelines_FastAPI_K8S_DAPR.    
 
 ![image](https://user-images.githubusercontent.com/75282285/150705537-a7460908-22c1-4d0f-a511-396cb4fc4739.png)
