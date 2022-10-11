@@ -1,4 +1,4 @@
-It use FastAPI to get the scraping data from the Pipeline part1.
+This is the part2 of the Pipline. It use FastAPI to get the scraping data from the Pipeline part1.
 Compare the web data and jobs collection. Insert the new data and modify the expired data in jobs.
 Then Compare the jobs and postedjobs. Insert the new data and modify the expired data in postedjobs.
 It tested OK with noahs and da-services on K8S with Dapr.
