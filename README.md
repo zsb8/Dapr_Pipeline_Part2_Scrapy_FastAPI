@@ -1,3 +1,5 @@
+**These sample codes will show  you my expertise. They do not contain any confidential information.**
+
 This is the part2 of the Pipline. It use FastAPI to get the scraping data from the Pipeline part1.
 Compare the web data and jobs collection (MongoDB). Insert the new data and modify the expired data in jobs.
 Then Compare the jobs and postedjobs (MongoDB). Insert the new data and modify the expired data in postedjobs.
